@@ -1,0 +1,128 @@
+<div style="height: 720px; background-image: url(<% request.uri_base %>/branding/logo.png); background-size: 1280px 720px; background-repeat: no-repeat;">
+	<div style="width: 640px; height: 100%; float: left;">
+		<div style="position:absolute; left: 700px; bottom: 110px">
+		
+		</div>
+	</div>
+	<div style="width: 405px; float: left; overflow: hidden;">
+		<img style="width: 405px; height: 720px; !important" src="<% request.uri_base %>/tmpgallery/<% foto_filename %>">
+	</div>
+</div>
+<div style="margin-top: 40px;">
+	<center>
+		<div id="buttons">
+		<form id="mailform" action="<% request.uri_base %>/mail/send/" method="get">
+			<input placeholder="E-Mail des Absenders" type="text" name="mailfrom" id="mailfrom">
+			<input placeholder="E-Mail des Empfängers" type="text" name="mail" id="mail">
+			<br /><br />
+			<a href="#" id="send" onclick="document.getElementById('mailform').submit();"><img width="194px" src="<% request.uri_base %>/images/maya/mail.png"></a> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="/new"><img width="194px" src="<% request.uri_base %>/images/maya/nocheinmal.png"></a> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="/"><img width="194px" src="<% request.uri_base %>/images/maya/zumanfang.png"></a>
+		</form>
+		</div>
+		<div id="loading"><h3>Bitte warten...</h3></div>
+		<h3>Fotonummer: <% foto_number %></h3>
+	</center>	
+</div>
+
+<script src="<% request.uri_base %>/keyboard/js/jquery-3.1.0.min.js"></script>
+<script src="<% request.uri_base %>/keyboard/js/jquery-ui.min.js"></script>
+<script src="<% request.uri_base %>/keyboard/js/jquery.keyboard.min.js"></script>
+<script src="<% request.uri_base %>/keyboard/languages/de.min.js"></script>
+
+<script>
+$("#loading").show();
+$(document).ready(function(){
+    $("#send").click(function(){
+        $("#buttons").hide();
+    });
+    $("#send").click(function(){
+        $("#loading").show();
+    });
+});
+</script>
+
+<script>
+$('#mailfrom').keyboard({
+
+	display: {
+		'bksp'   : '\u2190',
+		'normal' : 'ABC',
+		'meta1'  : '.?123',
+		'meta2'  : '#+=',
+		'accept' : 'Eingabe'
+	},
+
+	layout: 'custom',
+	customLayout: {
+		'normal': [
+			'q w e r t z u i o p {bksp}',
+			'a s d f g h j k l {accept}',
+			'{s} y x c v b n m @ . {s}',
+			'{meta1} {space} _ -'
+		],
+		'shift': [
+			'Q W E R T Z U I O P {bksp}',
+			'A S D F G H J K L {accept}',
+			'{s} Y X C V B N M @ . {s}',
+			'{meta1} {space} _ -'
+		],
+		'meta1': [
+			'1 2 3 4 5 6 7 8 9 0 {bksp}',
+			'` | { } % ^ * / \' {accept}',
+			'{meta2} $ & ~ # = + . {meta2}',
+			'{normal} {space} ! ?'
+		],
+		'meta2': [
+			'[ ] { } \u2039 \u203a ^ * " , {bksp}',
+			'\\ | / < > $ \u00a3 \u00a5 \u2022 {enter}',
+			'{meta1} \u20ac & ~ # = + . {meta1}',
+			'{normal} {space} ! ?'
+		]
+	}
+
+});
+</script>
+<script>
+$('#mail').keyboard({
+
+	display: {
+		'bksp'   : '\u2190',
+		'normal' : 'ABC',
+		'meta1'  : '.?123',
+		'meta2'  : '#+=',
+		'accept' : 'Eingabe'
+	},
+
+	layout: 'custom',
+	customLayout: {
+		'normal': [
+			'q w e r t z u i o p {bksp}',
+			'a s d f g h j k l {accept}',
+			'{s} y x c v b n m @ . {s}',
+			'{meta1} {space} _ -'
+		],
+		'shift': [
+			'Q W E R T Z U I O P {bksp}',
+			'A S D F G H J K L {accept}',
+			'{s} Y X C V B N M @ . {s}',
+			'{meta1} {space} _ -'
+		],
+		'meta1': [
+			'1 2 3 4 5 6 7 8 9 0 {bksp}',
+			'` | { } % ^ * / \' {accept}',
+			'{meta2} $ & ~ # = + . {meta2}',
+			'{normal} {space} ! ?'
+		],
+		'meta2': [
+			'[ ] { } \u2039 \u203a ^ * " , {bksp}',
+			'\\ | / < > $ \u00a3 \u00a5 \u2022 {enter}',
+			'{meta1} \u20ac & ~ # = + . {meta1}',
+			'{normal} {space} ! ?'
+		]
+	}
+
+});
+</script>

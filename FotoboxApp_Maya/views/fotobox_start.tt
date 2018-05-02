@@ -1,0 +1,33 @@
+<div style="height: 720px; background-image: url(<% request.uri_base %>/branding/logo.png); background-size: 1280px 720px; background-repeat: no-repeat;">
+	<div style="width: 640px; height: 100%; float: left;">
+		<div style="position:absolute; left: 700px; bottom: 110px">
+		
+		</div>
+	</div>
+	<div style="width: 405px; float: left; overflow: hidden;">
+		<img style="width: 405px; height: 720px; !important" src="http://fotobox.local:8081">
+	</div>
+</div>
+<div style="margin-top: 40px;">
+	<center>
+	<p style="color: #E30613; font-size: 30pt;">
+		Aufnahme in
+	</p>
+	<p style="color: #E30613; font-size: 66pt;" class="timer">
+		<% timer %>
+	</p>
+	</center>
+</div>
+	
+<script>
+	var timer = <% timer %>-1;	
+	var interval = setInterval(function() {
+	$('.timer').text(timer);
+	if (timer === 0) {
+		location.href="<% redirect_uri %>";
+		$('.timer').text(" ");
+	} else {
+		timer--;
+	}
+	}, 1000);
+</script>

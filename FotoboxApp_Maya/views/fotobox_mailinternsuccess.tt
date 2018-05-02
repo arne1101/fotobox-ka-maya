@@ -1,0 +1,26 @@
+<div style="height: 720px; background-image: url(<% request.uri_base %>/<% foto_filename %>); background-size: 1280px 720px; background-repeat: no-repeat;">
+</div>
+<div style="margin-top: 40px;">
+	<center>
+	
+			<h3>Ihr Foto wurde versandt an: <% mail %></h3>
+			<br />
+			
+			<a href="/gallery"><img width="194px" src="<% request.uri_base %>/images/maya/zurueck.png"></a> 
+			
+		
+			<h3>Fotonummer: <% foto_number %></h3>
+		
+	</center>	
+</div>	
+
+<script>
+    var timer = 6;	
+	var interval = setInterval(function() {
+	if (timer === 0) {
+		location.href="/gallery";
+	} else {
+		timer--;
+	}
+	}, 1000);
+</script>

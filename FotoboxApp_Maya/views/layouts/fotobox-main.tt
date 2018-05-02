@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Fotobox</title>
+<link rel="stylesheet" href="<% request.uri_base %>/css/custom.css" />
+<link rel="stylesheet" href="<% request.uri_base %>/keyboard/css/keyboard.min.css" />
+<link rel="stylesheet" href="<% request.uri_base %>/keyboard/css/jquery-ui.min.css" />
+
+<style>
+		body {	
+			overflow: hidden;
+		}
+</style>
+
+</head>
+
+<body>
+    
+<% content %>
+
+<script src="<% request.uri_base %>/js/jquery.js"></script>
+<script src="<% request.uri_base %>/js/idle-timer.min.js"></script>
+
+<script>
+        (function ($) {
+            $( document ).on( "idle.idleTimer", function(event, elem, obj){
+		     location.href="/";
+            });            
+            $.idleTimer(200000);
+            
+        })(jQuery);
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<center>
+<h3><% message %></h3>
+<h3>Fotonummer zum löschen eingeben</h3>
+    <form id="deleteform" action="<% request.uri_base %>/delete/confirm/" method="get">
+        <input placeholder="Fotonummer" type="text" name="number" id="number">
+        <br />
+        <a href="#" onclick="document.getElementById('deleteform').submit();">
+            <img width="194px" src="<% request.uri_base %>/images/maya/delete.png">
+        </a> 
+    </form>
+</center>	

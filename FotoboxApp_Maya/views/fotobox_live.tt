@@ -1,0 +1,16 @@
+<div style="height: 720px; background-image: url(<% request.uri_base %>/branding/logo.png); background-size: 1280px 720px; background-repeat: no-repeat;">
+	<div style="width: 640px; height: 100%; float: left;">
+	
+	</div>
+	<div style="width: 405px; float: left; overflow: hidden;">
+		<img style="width: 405px; height: 720px; !important" src="http://fotobox.local:8081">
+	</div>
+</div>
+<div style="margin-top: 100px;">
+	<center>	
+		<a href="start"><img width="194px" src="<% request.uri_base %>/images/maya/losgehts.png"></a> 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/"><img width="194px" src="<% request.uri_base %>/images/maya/zumanfang.png"></a>
+	</center>	
+</div>
+

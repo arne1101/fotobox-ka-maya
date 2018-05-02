@@ -1,0 +1,27 @@
+<div style="height: 720px; background-image: url(<% request.uri_base %>/branding/logo.png); background-size: 1280px 720px; background-repeat: no-repeat;">
+	<div style="width: 640px; height: 100%; float: left;">
+		<div style="position:absolute; left: 700px; bottom: 110px">
+		
+		</div>
+	</div>
+	<div style="width: 405px; float: left; overflow: hidden;">
+		<img style="width: 405px; height: 720px; !important" src="<% request.uri_base %>/tmpgallery/<% foto_filename %>">
+	</div>
+</div>
+<div style="margin-top: 100px;">
+	<center>	
+		<a href="<% request.uri_base %>/mail?foto=<% foto_filename %>">
+			<img width="194px" src="<% request.uri_base %>/images/maya/mail.png">
+		</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+		<a href="/new">
+			<img width="194px" src="<% request.uri_base %>/images/maya/nocheinmal.png">
+		</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="/">
+			<img width="194px" src="<% request.uri_base %>/images/maya/zumanfang.png">
+		</a>
+	</center>	
+</div>	
+			
+		

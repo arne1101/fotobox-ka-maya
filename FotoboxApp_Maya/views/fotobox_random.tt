@@ -1,0 +1,13 @@
+
+<img class="foto-strip fullscreen" src="<% request.uri_base %>/gallery/<% foto_filename %>">
+
+<script>
+ var timer = 10;	
+ var interval = setInterval(function() {
+ if (timer == 0) {
+ location.href="<% request.uri_base %>/random";
+ } else {
+ timer--;
+ }
+ }, 1000);
+</script>
